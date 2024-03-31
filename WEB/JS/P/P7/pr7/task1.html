@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>task1</title>
+</head>
+<body>
+    <input type="text"> text: <span id="value"></span>
+    <script>
+      var text = document.querySelector("input");
+      var output = document.querySelector("#value");
+      text.addEventListener("input", function() {
+        output.textContent = text.value;
+      });
+    </script>
+</body>
+</html>

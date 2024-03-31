@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<script>
+    function sqEquation(a, b, c)
+    {
+        document.write(a + "<i>x</i><sup>2</sup> + " + b + "<i>x</i> + " + c + " = 0<br>")
+        var D = b * b - 4 * a * c;
+        if(a == 0)
+        {
+            document.write("Equation are not square!<br>");
+        }
+        else
+        {
+            if(D < 0)
+            {
+                document.write("Equation does not have real roots!<br>");
+            }
+            else if(D == 0)
+            {
+                var x = -b / (2 * a);
+                document.write("Root: <i>x</i> = " + x + "<br>");
+            }
+            else
+            {
+                var x1 = (-b + Math.sqrt(D)) / (2 * a);
+                var x2 = (-b - Math.sqrt(D)) / (2 * a);
+                document.write("Root: <i>x</i><sub>1</sub> = " + x1 + "<br>");
+                document.write("Root: <i>x</i><sub>2</sub> = " + x2 + "<br>");
+            }
+        }
+    }
+    var a = parseFloat(window.prompt("Enter the number a: "));
+    var b = parseFloat(window.prompt("Enter the number b: "));
+    var c = parseFloat(window.prompt("Enter the number c: "));
+    sqEquation(a, b, c);
+</script>
+<body>
+</body>
+</html>

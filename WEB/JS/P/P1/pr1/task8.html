@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <script>
+        var x, sum, mul;
+        x = Math.round(Math.random() * 899 + 100);
+        document.write("Number: " + x);
+        sum = (x % 10) + (Math.floor(x / 10) % 10) + (Math.floor(x / 100) % 10);
+        mul = (x % 10) * (Math.floor(x / 10) % 10) * (Math.floor(x / 100) % 10);
+        document.write("<br>Sum of numeral: " + sum + "<br>Mul of numeral: " + mul);
+    </script>
+</head>
+<body>
+</body>
+</html>

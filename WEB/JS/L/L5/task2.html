@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Тест</h1>
+    <div id="quiz"></div>
+    <script>
+        const myQuestions = [
+            {
+                question: "Якою командою вибрати елемент по id?",
+                answers: {
+                    a: "getElementById()",
+                    b: "selectElementById()",
+                    c: "findElementById()",
+                    d: "queryById()"
+                },
+                correctAnswer: "a"
+            },
+            {
+                question: "Якою командою вибрати елементи по tagname?",
+                answers: {
+                    a: "findElementsByTagName();",
+                    b: "selectElementsByTagName();",
+                    c: "getElementsByTagName()",
+                    d: "queryByTagName();"
+                },
+                correctAnswer: "c"
+            },
+            {
+                question: "Якою командою вибрати елементи по css селектору?",
+                answers: {
+                    a: "selectElements();",
+                    b: "findElementsBySelector();",
+                    c: "getElementsBySelector();",
+                    d: "querySelectorAll();"
+                },
+                correctAnswer: "d"
+            }
+        ];
+
+        function buildQuiz(){
+            // Ваш код, що повертає тестові завдання у вигляді списку
+            let list = document.createElement('div');
+
+            myQuestions.forEach( quiz => {
+                let questionBlock = document.createElement('form');
+                let questionTitle = document.createElement('strong');
+                
+                questionTitle.textContent = quiz["question"];
+                questionBlock.appendChild(questionTitle);
+
+                let answerBlock = document.createElement('ul');
+                for(let key in quiz["answers"]) {
+                    let li = document.createElement('li');
+                    let radioButton = document.createElement('input');
+                    let answerOption = document.createElement('label');
+
+                    li.style.listStyle = 'none';
+                    radioButton.setAttribute('type', 'radio');
+                    radioButton.setAttribute('name', 'something');
+                    answerOption.textContent = key + ": " + quiz["answers"][key];
+
+                    li.appendChild(radioButton);
+                    li.appendChild(answerOption);
+                    answerBlock.appendChild(li);
+                }
+                questionBlock.appendChild(answerBlock);
+
+                list.appendChild(questionBlock);
+            });
+           
+            return list;
+        }
+
+        let quiz = buildQuiz();
+        //додайте отриманий тест у блок с id="quiz"
+        document.getElementById('quiz').appendChild(quiz);
+
+    </script>
+</body>
+
+</html>

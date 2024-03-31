@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>task1</title>
+</head>
+<body>
+    <p>
+        Get the iPhone 12 Pro Max 256GB + a selection of Belkin’s best items (Lightning Headset, Wall Charger) only for QAR 4,899 instead of QAR 5,327.
+        *Offer valid until stocks last.
+    </p>
+    <p>
+        Get the iPhone 12 Pro Max 256GB + a selection of Belkin’s best items (Lightning Headset, Wall Charger) only for QAR 4,899 instead of QAR 5,327.
+        *Offer valid until stocks last.
+    </p>
+    <script>
+        let text=document.getElementsByTagName('p');
+        
+        document.addEventListener('keydown', event => {
+            let text = document.querySelectorAll('p');
+            if(event.key == 'r') {
+                text.forEach( p => p.style.color = 'red');
+            } else if(event.key == 'g') {
+                text.forEach( p => p.style.color = 'green');
+            } else if(event.key == 'b') {
+                text.forEach( p => p.style.color = 'blue');
+            } else {
+                text.forEach( p => p.style.color = 'black');
+            }
+        });
+    </script>
+</body>
+</html>

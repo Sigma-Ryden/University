@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        table { 
+            font-size: x-large;
+            text-align: center;
+            border-spacing: 1px 1px;
+            color: white;
+        }
+        th {
+            text-align: left;
+            padding: 5px;
+        }
+        td, th {
+            width: 50px;
+            height: 50px;
+            border: 1px solid gray;
+            background-color:grey;
+        }
+        .printDigit {
+            font-size: x-large;
+            color: gray;
+        }
+        body {
+            display: grid;
+            grid-template-columns: 1fr 6fr;
+        }
+        td:active {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <table>
+            <tr><th class='showDigit' colspan='3'></th></tr>
+            <tr><td>1</td><td>2</td><td>3</td></tr>
+            <tr><td>4</td><td>5</td><td>6</td></tr>
+            <tr><td>7</td><td>8</td><td>9</td></tr>
+            <tr><td>C</td><td>0</td><td>S</td></tr>
+        </table>
+    </div>
+    <div class='printDigit'></div>
+    <div class='focusDigit'></div>
+
+    <script>
+        let table = document.querySelector('table');
+
+        let showDigit = document.querySelector('.showDigit');
+        let printDigit = document.querySelector('.printDigit');
+        let focusDigit = document.querySelector('.focusDigit');
+
+        let td = document.querySelectorAll('td');
+        for(let i = 0; i < td.length; ++i) {
+            td[i].tabIndex = i + 1;
+        }
+
+        function pred(target) {
+            if(target.textContent == 'C') {
+                showDigit.textContent = '';
+            } else if(target.textContent == 'S') {
+                printDigit.innerHTML += showDigit.textContent + '<br>';
+            } else {
+               showDigit.textContent += target.textContent;
+            }
+        }
+
+        table.addEventListener('click', event => {
+            if(event.target.tagName == 'TD') {
+                pred(event.target);
+                focusDigit.textContent = 'in focus: ' + event.target.textContent;
+            }
+        });
+        table.addEventListener('keyup', event => {
+            if(event.target.tagName == 'TD') {
+                if(event.key == 'Tab') {
+                    focusDigit.textContent = 'in focus: ' + event.target.textContent;
+                } else if(event.key == 'Enter') {
+                    pred(event.target);
+                }
+            }
+        });
+        table.addEventListener('focus', event => {
+    		if(event.target.tagName == 'TD') {
+    			focusDigit.textContent.textContent = "in focus: " + event.target.textContent;
+    		} else {
+        		focusDigit.textContent.textContent = "in focus:";
+    		}
+    	});
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>task3</title>
+    <style>
+    </style>
+</head>
+<body>
+    <form action="method">
+        <p>login:</p>
+        <input type="text">
+        <div class="help" style="background-color: pink; max-width: 180px;"></div>
+      </form>
+      <script>
+        let database = ["John", "Max", "Lili", "Mortis", "Jack", "Rembo", "Rem"];
+        let input = document.querySelector('input');
+        let toLogin = "";
+
+        function showListBlock(help) {
+            document.querySelector('.help').style.display = 'block';
+            document.querySelector('.help').style.zIndex = '1';
+        }
+        function hideListBlock(help) {
+            document.querySelector('.help').style.display = 'none';
+            document.querySelector('.help').style.zIndex = '0';
+        }
+        function isLetter(symbol) {
+            return symbol.toLowerCase() != symbol.toUpperCase(); 
+        }
+        function setHelpBlock(login) {
+            document.querySelector('.help').innerHTML = "";
+            for(let item of database) {
+                if(item.indexOf(login) !== -1) {
+                    document.querySelector('.help').innerHTML += item + "<br>";
+                }
+            }
+        }
+        input.addEventListener('keyup', event => {
+            if(event.key == 'Backspace') {
+                if(input.value.length > 0) {
+                    toLogin = input.value;
+                    setHelpBlock(toLogin);
+                    showListBlock();
+                } else {
+                    hideListBlock();
+                }
+            } else if(event.key.length == 1 && isLetter(event.key)) {
+                toLogin = input.value;
+                setHelpBlock(toLogin);
+                showListBlock();
+            }
+        });
+      </script>
+</body>
+</html>

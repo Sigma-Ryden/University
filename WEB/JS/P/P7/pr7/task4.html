@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>task4</title>
+</head>
+<body>
+    <form>
+        <input type="checkbox" class="cb">
+        <input type="checkbox" class="cb">
+        <input type="checkbox" class="cb">
+        <input type="button" class="free" value="free">
+    </form>
+    <script>
+        let free = document.querySelector('.free');
+        free.addEventListener('click', () => {
+            let list = document.querySelectorAll('.cb');
+            for(let key of list) {
+                key.checked = false;
+            }
+        });
+    </script>
+</body>
+</html>

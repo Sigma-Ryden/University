@@ -1,0 +1,2 @@
+function showText (el) {
+}

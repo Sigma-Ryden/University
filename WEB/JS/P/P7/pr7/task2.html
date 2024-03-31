@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>task1</title>
+</head>
+<body>
+    <form action="method">
+      login: <input type="text">
+    </form>
+    <script>
+        let database = ["John", "Max", "Lili"];
+        let check = document.querySelector('input');
+
+        check.addEventListener('input', () => {
+            for(let login of database) {
+                if(check.value != login) {
+                    check.style.color = 'green';
+                } else {
+                    check.style.color = 'red';
+                    return;
+                }
+            }
+        });
+    </script>
+</body>
+</html>

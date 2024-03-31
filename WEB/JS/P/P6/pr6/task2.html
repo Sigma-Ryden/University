@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>task2</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td id="td0">mouseup</td>
+            <td id="td1">mouseover</td>
+            <td id="td2">mouseout</td>
+        </tr>
+        <tr>
+            <td id="td3">mousedown</td>
+            <td id="td4">mouseenter</td>
+            <td id="td5">click</td>
+        </tr>
+    </table>
+    <script>
+        let table = document.querySelectorAll('td');
+        table.forEach( fild => {
+            fild.style.borderStyle = 'solid';
+            fild.style.borderWidth = '1px';
+            fild.style.padding = '20px';
+        });
+        
+        table[0].addEventListener('mouseup', event => {
+            table[0].style.backgroundColor = 'black';
+            table[0].style.color = 'orange';
+        });
+        table[1].addEventListener('mouseover', event => {
+            table[1].style.backgroundColor = 'grey';
+            table[1].style.color = 'white';
+        });
+        table[2].addEventListener('mouseout', event => {
+            table[2].style.backgroundColor = 'pink';
+            table[2].style.color = 'white';
+        });
+
+        table[3].addEventListener('mousedown', event => {
+            table[3].style.backgroundColor = 'green';
+            table[3].style.color = 'yellow';
+        });
+        table[4].addEventListener('mouseenter', event => {
+            table[4].style.backgroundColor = 'violet';
+            table[4].style.color = 'white';
+        });
+        table[5].addEventListener('click', event => {
+            table[5].style.backgroundColor = 'black';
+            table[5].style.color = 'white';
+        });
+    </script>
+</body>
+</html>

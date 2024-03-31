@@ -1,0 +1,108 @@
+KBJFW-NXHK6-W4WJM-CRMQB-G3CDH
+//int block_move = 1, k = 1 , t = 1;
+	//bool Flg_up = false, Flg_down = true;
+	//int i = 0, j = 0;
+	//for (; i != (N - 1) / 2 && j != (N - 1) / 2;t++)
+	//{
+	//	for (; i < N; i++, k++)
+	//	{
+	//		_matrix[i][j] = k;
+	//		
+	//	}
+	//	j++;
+	//	for (; j < N - t; j++)
+	//	{
+	//		_matrix[i][j] = k;
+	//		k++;
+	//	}
+	//	for (; i > 0; i--)
+	//	{
+	//		_matrix[i][j] = k;
+	//		k++;
+	//	}
+	//	for (; j > 0; j--)
+	//	{
+	//		_matrix[i][j] = k;
+	//		k++;
+	//	}
+	//}
+	///*int block_move = 1, k = 0, step = 0, grad = 4;
+	//bool flag_erf = false;
+	//for (int i = (N - 1) / 2, j = (N - 1) / 2, R=0; k<N*N; block_move++) {
+	//	if (step == 1) block_move = 2;
+	//	k++;
+	//	matrix[i][j] = k;
+	//	if (step % (4+R) == 0 && step != 0 && flag_erf == false)
+	//	{
+	//		R++;
+	//		flag_erf = true;
+	//	}
+	//	if (block_move > 1+R ){
+	//		block_move = 0;
+	//		grad++;
+	//		step++;
+	//		
+	//	}
+	//	
+	//	if (grad > 4) {
+	//		grad = 1;
+	//		
+	//	}
+	//		
+
+	//	switch (grad){
+	//		case 1:{j++;
+	//			break;
+	//		}
+	//		case 2:{i++;
+	//			break;
+	//		}
+	//		case 3:{j--;
+	//			break;
+	//		}
+	//		case 4:{i--;
+	//			break;
+	//		}
+	//	}
+	//	
+	//}*
+
+
+    TITLE <Обчислення Yn=2,5*x^2-3,2 (якщо x=4, step=4, inc=1.28)>
+.686
+.model flat, stdcall
+    option casemap: none
+.data
+    ups DWORD 1.28
+    sum DWORD 4.0
+    const1 DWORD 3.2
+    const2 DWORD 2.5
+    tymch DWORD 0
+    
+    res TBYTE 3 DUP(15)
+.code
+_st:
+    xor edi, edi
+    mov ecx, 4
+    mov ebx, 4
+ m1: 
+    mov eax, ebx
+    mul ebx
+    mov tymch, eax
+ finit
+    fld dword ptr ups
+    fld dword ptr sum
+    fadd st,st(1)
+    fstp sum
+    mov ebx, sum 
+      
+    fld dword ptr const1
+    fld dword ptr const2
+    fild dword ptr tymch
+    fmul st,st(1)
+    fsub st,st(2)
+ 
+    fstp res[edi]
+    add edi, 0Ah
+    loop m1
+    end _st

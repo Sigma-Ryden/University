@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <script>
+        var n, hour, min;
+        n = parseFloat(window.prompt("Enter the number of  seconds"));
+        hour = Math.floor(n / 3600);
+        while(hour > 23)
+        {
+            hour -= 24;
+        }
+        min = Math.floor((n % 3600) / 60);
+        document.write("Input: " + n + "s<br>");
+        document.write("Clock: " + hour + "h " + min + "m");
+    </script>
+</head>
+<body>
+</body>
+</html>
