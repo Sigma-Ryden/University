@@ -1,0 +1,13 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>0</x><y>240</y><w>100</w><h>30</h></coordinates><panel_attributes>Student</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>210</x><y>240</y><w>100</w><h>30</h></coordinates><panel_attributes>Group</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>390</x><y>240</y><w>100</w><h>30</h></coordinates><panel_attributes>Subject</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>370</y><w>100</w><h>30</h></coordinates><panel_attributes>Address</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>390</x><y>360</y><w>100</w><h>30</h></coordinates><panel_attributes>Teacher</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>40</x><y>260</y><w>50</w><h>130</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+m2=1
+має</panel_attributes><additional_attributes>10;110;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>90</x><y>240</y><w>140</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+m2=*
+навчаються в</panel_attributes><additional_attributes>120;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>300</x><y>240</y><w>110</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+m1=*
+m2=*
+вивчають</panel_attributes><additional_attributes>90;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>430</x><y>260</y><w>90</w><h>120</h></coordinates><panel_attributes>lt=&lt;-
+m1=*
+m2=*
+викладають</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element></diagram>

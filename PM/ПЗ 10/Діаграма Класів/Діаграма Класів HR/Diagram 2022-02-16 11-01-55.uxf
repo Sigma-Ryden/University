@@ -1,0 +1,79 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>310</x><y>225</y><w>150</w><h>300</h></coordinates><panel_attributes>HR_UI
+--
+- hr_Service : IHR_Service
+--
+CreateStudentAddress()
+CreateStudent()
+ReadeStudent()
+UpdateStudent()
+DeleteStudent()
+CreateAddress()
+ReadeAddress()
+UpdateAddress()
+DeleteAddress()
+CreateGroup()
+ReadeGroup()
+UpdateGroup()
+DeleteGroup()
+GroupAverageAge()
+ShowGroup()
+ShowStudent()
+ShowStudentsAddress()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>510</x><y>225</y><w>550</w><h>330</h></coordinates><panel_attributes>HR_Service
+--
+- dbStudent : IDBItem&lt;Student&gt;
+- dbAddress : IDBItem&lt;Address&gt;
+- dbGroup : IDBItem&lt;Group&gt;
+--
+CreateStudentAddress(name : string, surname : string, groupId : int, age : int, studentAddress : string)
+CreateStudent(name : string, surname : string, groupId : int, age : int)
+ReadeStudent(id : int)
+UpdateStudent(oldStudent : Student, name : string, surname : string, groupId : int, age : int)
+DeleteStudent(id : int)
+CreateAddress(studentAddress : string, studentId : int)
+ReadeAddress(id : int)
+UpdateAddress(oldAddress : Address, studentAddress : string, studentId : int)
+DeleteAddress(id : int)
+CreateGroup(groupName : string)
+ReadeGroup(id : int)
+UpdateGroup(oldGroup : Group, groupName : string)
+DeleteGroup(id : int)
+GroupAverageAge() : GroupAverageAgeViewModel
+ShowGroup() : Group
+ShowStudent() : Student
+ShowStudentsAddress() : StudentAddressViewModel
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>310</x><y>115</y><w>150</w><h>60</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+IHR_UI
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>370</x><y>165</y><w>30</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>450</x><y>365</y><w>80</w><h>30</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>60;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>710</x><y>135</y><w>150</w><h>60</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+IHR_Service
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>780</x><y>185</y><w>30</w><h>60</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;40</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1150</x><y>115</y><w>170</w><h>100</h></coordinates><panel_attributes>Student
+--
++ Id : int
++ Name : string
++ Surname : string
++ Age : int
++ GroupId : int</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1150</x><y>225</y><w>170</w><h>80</h></coordinates><panel_attributes>Address
+--
++ Id : int
++ StudentAddress : string
++ StudentId : int</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1150</x><y>325</y><w>170</w><h>60</h></coordinates><panel_attributes>Group
+--
++ Id : int
++ GroupName : string</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1150</x><y>405</y><w>170</w><h>120</h></coordinates><panel_attributes>StudentAddressBindingModel
+--
++ Id : int
++ Name : string
++ Surname : string
++ Age : int
++ GroupId : int
++ StudentAddress : string</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1150</x><y>545</y><w>170</w><h>60</h></coordinates><panel_attributes>GroupAverageAgeViewModel
+--
++ GroupName : string
++ AverageAge : decimal</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1150</x><y>625</y><w>170</w><h>70</h></coordinates><panel_attributes>StudentAddressViewModel
+--
++ StudentName : string
++ StudentSurname : string
++ StudentAddress : string</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1050</x><y>160</y><w>120</w><h>210</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>100;10;10;190</additional_attributes></element><element><id>Relation</id><coordinates><x>1050</x><y>260</y><w>120</w><h>150</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>100;10;10;130</additional_attributes></element><element><id>Relation</id><coordinates><x>1050</x><y>350</y><w>120</w><h>80</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>100;10;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>1050</x><y>500</y><w>120</w><h>190</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>100;170;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1050</x><y>440</y><w>120</w><h>50</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>100;30;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1050</x><y>480</y><w>120</w><h>120</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>100;100;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>910</x><y>135</y><w>150</w><h>30</h></coordinates><panel_attributes>: Common_Services</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>980</x><y>80</y><w>30</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>UMLClass</id><coordinates><x>910</x><y>45</y><w>150</w><h>40</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+ICommon_Services</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>980</x><y>160</y><w>30</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element></diagram>

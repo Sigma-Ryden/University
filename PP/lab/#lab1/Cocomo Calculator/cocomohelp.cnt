@@ -1,0 +1,17 @@
+:Base cocomohelp
+:Title Cocomo Help Contents
+1 Introduction=Introduction
+1 Calculate button=IDH_700
+1 Hardware attributes=IDH_1200
+1 Number of lines of Code=IDH_100
+1 Man Months=IDH_300
+1 Math behind Cocomo calculator=IDH_1400
+1 Number of men=IDH_400
+1 Calender time=IDH_500
+1 Project costs=IDH_600
+1 Project Attributes=IDH_900
+1 Product attributes=IDH_1000
+1 Personnel attributes=IDH_1100
+1 Reset button=IDH_1500
+1 Settings button=IDH_800
+1 Software development costs=IDH_200
