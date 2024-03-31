@@ -1,0 +1,30 @@
+#include <iostream>
+#include <cstring>
+
+int main()
+{
+	using std::cin;
+	using std::cout;
+	using std::endl;
+
+	const unsigned int SIZE = 10;
+
+	char first_name[SIZE]{};
+	char last_name[SIZE]{};
+	
+	cout << "Enter your first name: ";
+	cin.getline(first_name, SIZE);
+	cout << "Enter your last name: ";
+	cin.getline(last_name, SIZE);
+
+	char full_name[2*SIZE + 3]{};
+
+	strcpy(full_name, last_name);
+	strcat(full_name, ", ");
+	strcat(full_name, first_name);
+
+	cout << "Here's the information in a single string: ";
+	cout << full_name << endl;
+
+	return 0;
+}

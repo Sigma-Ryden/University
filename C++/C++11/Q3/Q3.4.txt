@@ -1,0 +1,30 @@
+#include <iostream>
+
+using std::cout;
+using std::cin;
+using std::endl;
+
+void show(long long sec) {
+
+    const long long day{ 60 * 60 * 24 };
+    const long long hour{ 60 * 60 };
+    const long long minute{ 60 };
+
+    cout << sec << " seconds = ";
+    cout << sec / day << " days, ";
+    cout << (sec % day) / hour  << " hours, ";
+    cout << ((sec % day) % hour) / minute << " minutes, ";
+    cout << ((sec % day) % hour) % minute << " seconds";
+}
+
+int main()
+{
+    long long sec{};
+
+    cout << "Enter the number of seconds: ";
+    cin >> sec;
+
+    show(sec);
+
+    return 0;
+}

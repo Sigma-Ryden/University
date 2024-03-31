@@ -1,0 +1,64 @@
+#include <iostream>
+#include <cmath>
+
+double function(double x)
+{
+    double fx{};
+
+    return fx;
+}
+
+double integration()
+{
+    const double N{ pow(10, 6) };
+    double sum{};
+
+    for (unsigned int i = 1; i < N; i++)
+    {
+        sum += function(i / N);
+    }
+
+    return sum/N;
+}
+
+int main()
+{
+    using std::cout;
+    using std::endl;
+   
+    cout << "Result: " << integration() << endl;
+
+    return 0;
+}
+//
+#include <iostream>
+
+using std::cout;
+using std::cin;
+using std::endl;
+
+int main()
+{
+	int x = 1;
+	int* p_x = &x;
+	int* *pp_x = &p_x;
+
+	char arr[20] = "Hello, World";
+	
+	char* p_arr;
+	p_arr = arr;
+	
+	cout << "x: " << x << ", adress of x: " << &x;
+	cout << endl;
+	cout << "p_x: " << p_x << ", value of p_x: " << *p_x << ", adress of p_x: " << &p_x;
+	cout << endl;
+	cout << "pp_x: " << pp_x << ", value of pp_x: " << *pp_x << ", adress of pp_x: " << &pp_x;
+	cout << ", value pf *pp_x: " << **pp_x;
+	cout << endl;
+	cout << "arr: " << arr << ", value of arr: " << *arr << ", adress of arr: " << &arr;
+	cout << endl;
+	cout << "p_arr: " << (int*)p_arr << ", value of p_arr: " << *p_arr << ", adress of p_arr: " << &p_arr;
+	cout << endl;
+
+	return 0;
+}

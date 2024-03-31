@@ -1,0 +1,26 @@
+#include <iostream>
+
+using std::cout;
+using std::cin;
+using std::endl;
+
+double productive(double l, double v)
+{
+    return 100.0 * v / l;
+}
+
+int main()
+{
+    double length{};
+    double volume{};
+
+    cout << "Enter the length in kilometers: ";
+    cin >> length;
+    cout << "Enter the size of the benzin in liters: ";
+    cin >> volume;
+
+    cout << "Productive " << productive(length, volume);
+    cout << " litres for 100 kilometers";
+
+    return 0;
+}

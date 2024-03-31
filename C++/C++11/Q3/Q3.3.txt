@@ -1,0 +1,35 @@
+#include <iostream>
+
+using std::cout;
+using std::cin;
+using std::endl;
+
+void show(double deg, double min, double sec) {
+
+    const double MIN{ 60.0 };
+    const double DEG{ 3600.0 };
+
+    cout << deg << " degrees, ";
+    cout << min << " minutes, ";
+    cout << sec << " seconds = ";
+    cout << deg + min / MIN + sec / DEG << " degrees";
+}
+
+int main()
+{
+    double deg{};
+    double min{};
+    double sec{};
+
+    cout << "Enter a latitude in degrees, minutes, and seconds:" << endl;
+    cout << "First, enter the degrees: ";
+    cin >> deg;
+    cout << "Next, enter the minutes of arc: ";
+    cin >> min;
+    cout << "Finally, enter the seconds of arc: ";
+    cin >> sec;
+
+    show(deg, min, sec);
+
+    return 0;
+}

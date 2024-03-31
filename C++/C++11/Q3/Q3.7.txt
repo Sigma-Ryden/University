@@ -1,0 +1,25 @@
+#include <iostream>
+
+using std::cout;
+using std::cin;
+using std::endl;
+
+double convector(double volume)
+{
+    const double mile{ 62.14 };
+    const double gallon{ 3.8 };
+
+    return mile * gallon / volume;
+}
+
+int main()
+{
+    double volume{};
+
+    cout << "Enter the liters for 100 kilometers: ";
+    cin >> volume;
+
+    cout << "Is equal to " <<  convector(volume) << " miles for 1 gallon";
+
+    return 0;
+}

@@ -1,0 +1,26 @@
+#include <iostream>
+
+using std::cout;
+using std::cin;
+using std::endl;
+
+long double procent(long long p_w, long long p_us)
+{
+    return 100.0 * long double(p_us) / long double(p_w);
+}
+
+int main()
+{
+    long long p_w{};
+    long long p_us{};
+
+    cout << "Enter the world's population: ";
+    cin >> p_w;
+    cout << "Enter the population of the US: ";
+    cin >> p_us;
+
+    cout << "The population of the US is " << procent(p_w, p_us);
+    cout << "% of the world population.";
+
+    return 0;
+}

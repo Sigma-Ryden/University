@@ -1,0 +1,45 @@
+#include <iostream>
+
+using std::cout;
+using std::cin;
+using std::endl;
+
+double meter(unsigned int inch, unsigned int foot)
+{
+    const double kf{ 12.0 };
+    const double km{ 0.0254 };
+
+    return (double(foot) * kf + double(inch)) * km;
+}
+
+double kilogram(unsigned int pound)
+{
+    const double kk{ 2.2 };
+
+    return double(pound) / kk;
+}
+
+int main()
+{
+    unsigned int foot{};
+    unsigned int inch{};
+    unsigned int pound{};
+
+    cout << "Enter a length in foots, inchs and weight in pounds: " << endl;
+    cout << "First, enter the foots: ";
+    cin >> foot;
+    cout << "Next, enter the inchs: ";
+    cin >> inch;
+    cout << "Finally, enter the pounds: ";
+    cin >> pound;
+
+    double kg{};
+    double m{};
+
+    kg = kilogram(pound);
+    m = meter(inch, foot);
+
+    cout << "BIM = " << kg / (m * m);
+
+    return 0;
+}

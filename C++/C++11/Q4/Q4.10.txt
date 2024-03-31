@@ -1,0 +1,23 @@
+#include <iostream>
+#include <array>
+
+int main()
+{
+	using std::cin;
+	using std::cout;
+	using std::endl;
+	using std::array;
+
+	array<double, 3> arr;
+
+	cout << "Enter the time of first run: ";
+	cin >> arr[0];
+	cout << "Enter the time of second run: ";
+	cin >> arr[1];
+	cout << "Enter the time of last run: ";
+	cin >> arr[2];
+
+	cout << "Average run time: " << (arr[0] + arr[1] + arr[2]) / 3;
+
+	return 0;
+}

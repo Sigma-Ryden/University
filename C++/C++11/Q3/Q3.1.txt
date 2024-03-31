@@ -1,0 +1,27 @@
+#include <iostream>
+
+using std::cin;
+using std::cout;
+using std::endl;
+
+void show(int inch)
+{
+    const int K{ 12 };
+
+    cout << inch << " inch : ";
+    cout << inch / K << " foot.";
+    cout << " and " << inch % K << " inch.";
+}
+
+int main()
+{
+    int inch{};
+    int foot{};
+
+    cout << "Enter size of inch : ___\b\b\b";
+    cin >> inch;
+
+    show(inch);
+
+    return 0;
+}
