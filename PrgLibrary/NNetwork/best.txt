@@ -1,0 +1,177 @@
+start train [1]:
+17.573323600
+start train [2]:
+17.291293000
+start train [3]:
+17.260054900
+start train [4]:
+17.260042900
+start train [5]:
+17.228779900
+NNetwork train loss: 0.536282744
+start train [6]:
+17.291337700
+start train [7]:
+17.291293800
+start train [8]:
+17.213159500
+start train [9]:
+17.228848500
+start train [10]:
+17.244436000
+NNetwork train loss: 0.478010059
+start train [11]:
+17.275685000
+start train [12]:
+17.353738100
+start train [13]:
+17.338155200
+start train [14]:
+17.275706800
+start train [15]:
+17.322537100
+NNetwork train loss: 0.456389700
+start train [16]:
+17.275647300
+start train [17]:
+17.291290000
+start train [18]:
+17.591195200
+start train [19]:
+17.291289600
+start train [20]:
+17.228817100
+NNetwork train loss: 0.432906111
+start train [21]:
+17.431886700
+start train [22]:
+17.260092000
+start train [23]:
+17.275675100
+start train [24]:
+17.291257400
+start train [25]:
+17.260087700
+NNetwork train loss: 0.344734787
+start train [26]:
+17.260090800
+start train [27]:
+17.334555500
+start train [28]:
+17.379378800
+start train [29]:
+17.343877500
+start train [30]:
+17.353775400
+NNetwork train loss: 0.291478779
+start train [31]:
+17.666139900
+start train [32]:
+17.416296700
+start train [33]:
+17.260057200
+start train [34]:
+17.260051200
+start train [35]:
+17.228814300
+NNetwork train loss: 0.236895634
+start train [36]:
+17.275685500
+start train [37]:
+17.244435700
+start train [38]:
+17.275637300
+start train [39]:
+17.463104700
+start train [40]:
+17.666181800
+NNetwork train loss: 0.188710942
+start train [41]:
+17.666193100
+start train [42]:
+17.478738300
+start train [43]:
+17.447493800
+start train [44]:
+17.376163900
+start train [45]:
+17.371083300
+NNetwork train loss: 0.164331457
+start train [46]:
+17.244445100
+start train [47]:
+17.244433500
+start train [48]:
+17.306882800
+start train [49]:
+17.260088700
+start train [50]:
+17.275669100
+NNetwork train loss: 0.073807535
+NNetwork tarin global accuracy: 0.988560000
+NNetwork tarin normal accuracy: 0.954400000
+NNetwork tarin hight accuracy: 0.892800000
+NNetwork test loss: 0.263405951
+NNetwork test global accuracy: 0.946110000
+NNetwork test normal accuracy: 0.845100000
+NNetwork test hight accuracy: 0.606600000
+//
+void test13()
+{
+//  Some preparing:
+    using NeuralFeedForward
+         = Neuro<li::Matrix, li::Vector, Dictionary, li::Linear, double>;
+
+    auto dataset =
+        mnist::read_dataset<std::vector, std::vector, uint8_t, uint8_t>("C:/mnist_data/");
+
+    std::size_t train_batch_size = 2500;
+    std::size_t test_batch_size = 10000;
+    std::size_t input_size = 784;
+    std::size_t out_size = 10;
+
+    NeuralFeedForward network = { input_size, 352, 352, out_size };
+    network.initializeInnerStruct(random_real);
+    network.setActivationFunction(sigma, sigma_derived);
+
+//  Train batch initialize:
+    li::Matrix train_in = initialize_i(dataset.training_images, train_batch_size, input_size);
+    li::Matrix train_out = initialize_o(dataset.training_labels, train_batch_size, out_size);
+
+//  Test batch initialize:
+    li::Matrix test_in = initialize_i(dataset.test_images, test_batch_size, input_size);
+    li::Matrix test_out = initialize_o(dataset.test_labels, test_batch_size, out_size);
+
+//  Show image:
+   //show_image_batch(train_in);
+
+    std::size_t times = 50;
+    for(std::size_t i = 0; i < times; ++i)
+    {
+    //  Train network:
+        std::cout << "start train [" << i + 1 << "]:\n";
+        Timer t;
+        //network.trainMiniBatch(train_in, train_out, 0.5, 100, 32);
+        network.trainStochastic(train_in, train_out, 0.75, 10'000);
+        //network.trainBatch(train_in, train_out, 0.5, 1'000);
+        std::cout << t.elapsed() << '\n';
+
+    //  Network after train:
+        //std::cout << "After train [" << i + 1 << "]:\n";
+    //  Test train_batch aft
+        //std::cout << "NNetwork tarin global accuracy: " << network.globalAccuracy(train_in, train_out, 0.25) << '\n';
+        //std::cout << "NNetwork tarin normal accuracy: " << network.normalAccuracy(train_in, train_out) << '\n';
+        //std::cout << "NNetwork tarin hight accuracy: " << network.fullAccuracy(train_in, train_out, 0.25) << '\n';
+        if((i + 1) % 5 == 0)
+            std::cout << "NNetwork train loss: " << network.loss(train_in, train_out) << '\n';
+    }
+    //  Test train_batch aft
+    std::cout << "NNetwork tarin global accuracy: " << network.globalAccuracy(train_in, train_out, 0.25) << '\n';
+    std::cout << "NNetwork tarin normal accuracy: " << network.normalAccuracy(train_in, train_out) << '\n';
+    std::cout << "NNetwork tarin hight accuracy: " << network.fullAccuracy(train_in, train_out, 0.25) << '\n';
+    //  Test test_batch aft
+    std::cout << "NNetwork test loss: " << network.loss(test_in, test_out) << '\n';
+    std::cout << "NNetwork test global accuracy: " << network.globalAccuracy(test_in, test_out, 0.25) << '\n';
+    std::cout << "NNetwork test normal accuracy: " << network.normalAccuracy(test_in, test_out) << '\n';
+    std::cout << "NNetwork test hight accuracy: " << network.fullAccuracy(test_in, test_out, 0.25) << '\n';
+}

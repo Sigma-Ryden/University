@@ -1,0 +1,306 @@
+start train [1]:
+5.469299500
+After train [1]:
+NNetwork train loss: 0.938285413
+start train [2]:
+5.404513600
+After train [2]:
+NNetwork train loss: 0.937702455
+start train [3]:
+5.388858600
+After train [3]:
+NNetwork train loss: 0.937333881
+start train [4]:
+5.388892000
+After train [4]:
+NNetwork train loss: 0.936961144
+start train [5]:
+5.404517600
+After train [5]:
+NNetwork train loss: 0.936556953
+start train [6]:
+5.388894900
+After train [6]:
+NNetwork train loss: 0.936149545
+start train [7]:
+5.373240700
+After train [7]:
+NNetwork train loss: 0.935735764
+start train [8]:
+5.373277600
+After train [8]:
+NNetwork train loss: 0.935161028
+start train [9]:
+5.279556700
+After train [9]:
+NNetwork train loss: 0.934492849
+start train [10]:
+5.263937700
+After train [10]:
+NNetwork train loss: 0.934029154
+start train [11]:
+5.263900100
+After train [11]:
+NNetwork train loss: 0.933615796
+start train [12]:
+5.279556500
+After train [12]:
+NNetwork train loss: 0.933207510
+start train [13]:
+5.279557000
+After train [13]:
+NNetwork train loss: 0.932728682
+start train [14]:
+5.310797200
+After train [14]:
+NNetwork train loss: 0.932306193
+start train [15]:
+5.342070400
+After train [15]:
+NNetwork train loss: 0.931890396
+start train [16]:
+5.390233600
+After train [16]:
+NNetwork train loss: 0.931477867
+start train [17]:
+5.572395900
+After train [17]:
+NNetwork train loss: 0.931048654
+start train [18]:
+5.477973400
+After train [18]:
+NNetwork train loss: 0.930637238
+start train [19]:
+5.676692500
+After train [19]:
+NNetwork train loss: 0.930233096
+start train [20]:
+5.463755000
+After train [20]:
+NNetwork train loss: 0.929834422
+start train [21]:
+5.763767600
+After train [21]:
+NNetwork train loss: 0.929432645
+start train [22]:
+5.484182300
+After train [22]:
+NNetwork train loss: 0.928907321
+start train [23]:
+5.498225100
+After train [23]:
+NNetwork train loss: 0.928475557
+start train [24]:
+5.857490800
+After train [24]:
+NNetwork train loss: 0.927958058
+start train [25]:
+5.373248700
+After train [25]:
+NNetwork train loss: 0.927528460
+start train [26]:
+5.373278400
+After train [26]:
+NNetwork train loss: 0.927145662
+start train [27]:
+5.623191900
+After train [27]:
+NNetwork train loss: 0.926766585
+start train [28]:
+5.670086000
+After train [28]:
+NNetwork train loss: 0.926373045
+start train [29]:
+5.295177000
+After train [29]:
+NNetwork train loss: 0.925926366
+start train [30]:
+5.295212800
+After train [30]:
+NNetwork train loss: 0.925506214
+NNetwork tarin global accuracy: 0.207000000
+NNetwork tarin normal accuracy: 0.903800000
+NNetwork train loss: 0.925506214
+NNetwork test global accuracy: 0.229000000
+NNetwork test normal accuracy: 0.907600000
+NNetwork test loss: 0.883945530
+//
+start train [1]:
+8.006559000
+After train [1]:
+NNetwork tarin global accuracy: 0.900100000
+NNetwork tarin normal accuracy: 0.162000000
+NNetwork tarin hight accuracy: 0.003000000
+NNetwork train loss: 0.994009913
+start train [2]:
+7.778757500
+After train [2]:
+NNetwork tarin global accuracy: 0.902600000
+NNetwork tarin normal accuracy: 0.236000000
+NNetwork tarin hight accuracy: 0.079000000
+NNetwork train loss: 0.916149947
+start train [3]:
+8.020841700
+After train [3]:
+NNetwork tarin global accuracy: 0.901000000
+NNetwork tarin normal accuracy: 0.199000000
+NNetwork tarin hight accuracy: 0.010000000
+NNetwork train loss: 0.975332463
+start train [4]:
+8.062981100
+After train [4]:
+NNetwork tarin global accuracy: 0.906200000
+NNetwork tarin normal accuracy: 0.236000000
+NNetwork tarin hight accuracy: 0.066000000
+NNetwork train loss: 0.925734641
+start train [5]:
+7.910080200
+After train [5]:
+NNetwork tarin global accuracy: 0.909200000
+NNetwork tarin normal accuracy: 0.243000000
+NNetwork tarin hight accuracy: 0.101000000
+NNetwork train loss: 0.897107328
+start train [6]:
+7.747503400
+After train [6]:
+NNetwork tarin global accuracy: 0.907500000
+NNetwork tarin normal accuracy: 0.194000000
+NNetwork tarin hight accuracy: 0.086000000
+NNetwork train loss: 0.915756756
+start train [7]:
+7.862515300
+After train [7]:
+NNetwork tarin global accuracy: 0.895900000
+NNetwork tarin normal accuracy: 0.209000000
+NNetwork tarin hight accuracy: 0.139000000
+NNetwork train loss: 0.960968267
+start train [8]:
+7.930980700
+After train [8]:
+NNetwork tarin global accuracy: 0.909300000
+NNetwork tarin normal accuracy: 0.252000000
+NNetwork tarin hight accuracy: 0.117000000
+NNetwork train loss: 0.879709605
+start train [9]:
+7.812158500
+After train [9]:
+NNetwork tarin global accuracy: 0.913400000
+NNetwork tarin normal accuracy: 0.315000000
+NNetwork tarin hight accuracy: 0.145000000
+NNetwork train loss: 0.851219551
+start train [10]:
+7.716269100
+After train [10]:
+NNetwork tarin global accuracy: 0.913100000
+NNetwork tarin normal accuracy: 0.322000000
+NNetwork tarin hight accuracy: 0.154000000
+NNetwork train loss: 0.852005276
+start train [11]:
+8.089980300
+After train [11]:
+NNetwork tarin global accuracy: 0.907500000
+NNetwork tarin normal accuracy: 0.254000000
+NNetwork tarin hight accuracy: 0.076000000
+NNetwork train loss: 0.918384948
+start train [12]:
+7.984016500
+After train [12]:
+NNetwork tarin global accuracy: 0.911800000
+NNetwork tarin normal accuracy: 0.330000000
+NNetwork tarin hight accuracy: 0.151000000
+NNetwork train loss: 0.859070333
+start train [13]:
+7.928254000
+After train [13]:
+NNetwork tarin global accuracy: 0.914100000
+NNetwork tarin normal accuracy: 0.300000000
+NNetwork tarin hight accuracy: 0.158000000
+NNetwork train loss: 0.846305560
+start train [14]:
+7.669397900
+After train [14]:
+NNetwork tarin global accuracy: 0.912300000
+NNetwork tarin normal accuracy: 0.276000000
+NNetwork tarin hight accuracy: 0.134000000
+NNetwork train loss: 0.856814415
+start train [15]:
+7.829026400
+After train [15]:
+NNetwork tarin global accuracy: 0.904800000
+NNetwork tarin normal accuracy: 0.202000000
+NNetwork tarin hight accuracy: 0.065000000
+NNetwork train loss: 0.924257626
+start train [16]:
+7.885215500
+After train [16]:
+NNetwork tarin global accuracy: 0.913100000
+NNetwork tarin normal accuracy: 0.294000000
+NNetwork tarin hight accuracy: 0.148000000
+NNetwork train loss: 0.856469674
+start train [17]:
+7.825602800
+After train [17]:
+NNetwork tarin global accuracy: 0.906500000
+NNetwork tarin normal accuracy: 0.260000000
+NNetwork tarin hight accuracy: 0.074000000
+NNetwork train loss: 0.917343327
+start train [18]:
+7.669406400
+After train [18]:
+NNetwork tarin global accuracy: 0.910200000
+NNetwork tarin normal accuracy: 0.274000000
+NNetwork tarin hight accuracy: 0.107000000
+NNetwork train loss: 0.877955035
+start train [19]:
+8.042983700
+After train [19]:
+NNetwork tarin global accuracy: 0.907700000
+NNetwork tarin normal accuracy: 0.266000000
+NNetwork tarin hight accuracy: 0.109000000
+NNetwork train loss: 0.907729739
+start train [20]:
+7.922547000
+After train [20]:
+NNetwork tarin global accuracy: 0.905900000
+NNetwork tarin normal accuracy: 0.225000000
+NNetwork tarin hight accuracy: 0.061000000
+NNetwork train loss: 0.932187389
+start train [21]:
+7.653772100
+After train [21]:
+NNetwork tarin global accuracy: 0.906600000
+NNetwork tarin normal accuracy: 0.227000000
+NNetwork tarin hight accuracy: 0.075000000
+NNetwork train loss: 0.926256549
+start train [22]:
+7.638194800
+After train [22]:
+NNetwork tarin global accuracy: 0.900000000
+NNetwork tarin normal accuracy: 0.148000000
+NNetwork tarin hight accuracy: 0.000000000
+NNetwork train loss: 0.999934704
+start train [23]:
+7.844017400
+After train [23]:
+NNetwork tarin global accuracy: 0.900000000
+NNetwork tarin normal accuracy: 0.166000000
+NNetwork tarin hight accuracy: 0.000000000
+NNetwork train loss: 0.999930354
+start train [24]:
+7.821990100
+After train [24]:
+NNetwork tarin global accuracy: 0.900900000
+NNetwork tarin normal accuracy: 0.207000000
+NNetwork tarin hight accuracy: 0.009000000
+NNetwork train loss: 0.984030979
+start train [25]:
+7.669408900
+After train [25]:
+NNetwork tarin global accuracy: 0.900000000
+NNetwork tarin normal accuracy: 0.120000000
+NNetwork tarin hight accuracy: 0.000000000
+NNetwork train loss: 0.999000097
+NNetwork test global accuracy: 0.900000000
+NNetwork test normal accuracy: 0.121000000
+NNetwork test hight accuracy: 0.000000000
+NNetwork test loss: 0.999644215

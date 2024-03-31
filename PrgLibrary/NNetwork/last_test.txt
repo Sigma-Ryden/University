@@ -1,0 +1,80 @@
+start train [1]:
+73.039374700
+After train [1]:
+NNetwork train loss: 0.202065530
+start train [2]:
+76.122834100
+After train [2]:
+NNetwork train loss: 0.048617197
+start train [3]:
+76.510801100
+After train [3]:
+NNetwork train loss: 0.032039848
+NNetwork tarin global accuracy: 0.996800000
+NNetwork tarin normal accuracy: 0.969000000
+NNetwork tarin hight accuracy: 0.968000000
+NNetwork test loss: 0.219823520
+NNetwork test global accuracy: 0.970390000
+NNetwork test normal accuracy: 0.879600000
+NNetwork test hight accuracy: 0.787700000
+
+///>
+void test13()
+{
+//  Some preparing:
+    using NeuralFeedForward
+         = Neuro<li::Matrix, li::Vector, Dictionary, li::Linear, double>;
+
+    auto dataset =
+        mnist::read_dataset<std::vector, std::vector, uint8_t, uint8_t>("C:/mnist_data/");
+
+    std::size_t train_batch_size = 1000;
+    std::size_t test_batch_size = 10000;
+    std::size_t input_size = 784;
+    std::size_t out_size = 10;
+
+    NeuralFeedForward network = { input_size, 350, 350, out_size };
+    network.initializeInnerStruct(random_real);
+    network.setActivationFunction(sigma, sigma_derived);
+
+//  Train batch initialize:
+    li::Matrix train_in = initialize_i(dataset.training_images, train_batch_size, input_size);
+    li::Matrix train_out = initialize_o(dataset.training_labels, train_batch_size, out_size);
+
+//  Test batch initialize:
+    li::Matrix test_in = initialize_i(dataset.test_images, test_batch_size, input_size);
+    li::Matrix test_out = initialize_o(dataset.test_labels, test_batch_size, out_size);
+
+//  Show image:
+   //show_image_batch(train_in);
+
+    std::size_t times = 3;
+    for(std::size_t i = 0; i < times; ++i)
+    {
+    //  Train network:
+        std::cout << "start train [" << i + 1 << "]:\n";
+        Timer t;
+        //network.trainMiniBatch(train_in, train_out, 0.5, 1'000, 500);
+        network.trainStochastic(train_in, train_out, 0.75, 10'000);
+        //network.trainBatch(train_in, train_out, 0.5, 1'000);
+        std::cout << t.elapsed() << '\n';
+
+    //  Network after train:
+        std::cout << "After train [" << i + 1 << "]:\n";
+    //  Test train_batch aft
+        //std::cout << "NNetwork tarin global accuracy: " << network.globalAccuracy(train_in, train_out, 0.25) << '\n';
+        //std::cout << "NNetwork tarin normal accuracy: " << network.normalAccuracy(train_in, train_out) << '\n';
+        //std::cout << "NNetwork tarin hight accuracy: " << network.fullAccuracy(train_in, train_out, 0.25) << '\n';
+        std::cout << "NNetwork train loss: " << network.loss(train_in, train_out) << '\n';
+    }
+    //  Test train_batch aft
+    std::cout << "NNetwork tarin global accuracy: " << network.globalAccuracy(train_in, train_out, 0.25) << '\n';
+    std::cout << "NNetwork tarin normal accuracy: " << network.normalAccuracy(train_in, train_out) << '\n';
+    std::cout << "NNetwork tarin hight accuracy: " << network.fullAccuracy(train_in, train_out, 0.25) << '\n';
+    //  Test test_batch aft
+    std::cout << "NNetwork test loss: " << network.loss(test_in, test_out) << '\n';
+    std::cout << "NNetwork test global accuracy: " << network.globalAccuracy(test_in, test_out, 0.25) << '\n';
+    std::cout << "NNetwork test normal accuracy: " << network.normalAccuracy(test_in, test_out) << '\n';
+    std::cout << "NNetwork test hight accuracy: " << network.fullAccuracy(test_in, test_out, 0.25) << '\n';
+
+}

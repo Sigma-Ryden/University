@@ -1,0 +1,43 @@
+start train:
+Epoch 100
+Epoch 200
+Epoch 300
+Epoch 400
+Epoch 500
+Epoch 600
+Epoch 700
+Epoch 800
+Epoch 900
+Epoch 1000
+NNetwork tarin accuracy: 0.411433
+NNetwork train loss: 0.863127
+NNetwork test accuracy: 0.001800
+NNetwork test loss: 0.862909
+
+//
+NNetwork::NNetwork(const std::initializer_list<std::size_t>& inner)
+    : W(inner.size() - 1), B(inner.size() - 1), N(inner.size() - 1)
+{
+    std::size_t i = 0;
+    for(auto n = inner.begin() + 1; n != inner.end(); ++n)
+    {
+        W[i] = Matrix(*(n - 1), *n);
+        B[i] = Vector(*n);
+        ++i;
+    }
+}
+
+NNetwork::NNetwork(const std::initializer_list<std::size_t>& inner)
+    : W(inner.size() - 1), B(inner.size() - 1), N(inner.size() - 1)
+{
+    auto i = inner.begin();
+    auto j = inner.begin() + 1;
+
+    for(std::size_t k = 0; k < N; ++k)
+    {
+        W[k] = Matrix(*i, *j);
+        B[k] = Vector(*j);
+        ++i;
+        ++j;
+    }
+}

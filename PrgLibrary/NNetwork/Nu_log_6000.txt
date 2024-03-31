@@ -1,0 +1,4 @@
+Epoch 120000
+start test:
+NNetwork accuracy: 0.254%
+NNetwork loss: 0.716%
