@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>TicketFlights</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	</head>
+
+	<body style="background: whitesmoke;">
+	<table class="table table-bordered table-hover">
+	  <thead class="thead-light">
+	    <tr>
+	      <th scope="col">ticket_no</th>
+	      <th scope="col">flight_id</th>
+	      <th scope="col">fare_conditions</th> 
+  	      <th scope="col">amount</th>  	      
+	    </tr>
+	  </thead>
+	  <tbody>
+		{% for ticket_flight in ticket_flights %}
+	    <tr>
+	      <td>{{ticket_flight.ticket_no}}</td>
+	      <td>{{ticket_flight.flight_id}}</td>
+	      <td>{{ticket_flight.fare_conditions}}</td>
+	      <td>{{ticket_flight.amount}}</td>
+	    </tr>
+		{% endfor %}
+	  </tbody>
+	</table>
+
+	</body>
+</html>
