@@ -1,0 +1,50 @@
+1 slide==============================
+
+2 slide==============================
+Scikit-learn is a free software machine learning library for the Python programming language.
+The library implements the following main methods:
+Linear: models, the task is to construct a separating (for classification) or 
+approximating (for regression) hyperplane.
+Metric: models that calculate the distance using one of the metrics between the objects in the sample,
+and make decisions based on this distance (nearest neighbors).
+Decision trees: training models based on a set of conditions that are optimally selected to solve a problem.
+3 slide==============================
+This project, developed by David Cournapeau, was published in the Google Summer of Code program
+and was released in 2010. Since its creation, the library has transformed into an infrastructure with 
+ample opportunities to create machine learning models. New features allow you to solve even more problems 
+and increase usability. In this article, I will talk about the ten most interesting features that you may 
+not know about.
+4 slide==============================
+Classification is the process of predicting the class of given data points. 
+Classes are sometimes called as targets/ labels or categories. 
+Classification predictive modeling is the task of approximating a mapping function 
+(f) from input variables (X) to discrete output variables (y).
+5 slide==============================
+Regression is a statistical method used in finance, investing, and other disciplines that 
+attempts to determine the strength and character of the relationship between one dependent 
+variable (usually denoted by Y) and a series of other variables (known as independent variables).
+
+Regression helps investment and financial managers to value assets and understand the relationships
+between variables, such as commodity prices and the stocks of businesses dealing in those commodities.
+6 slide==============================
+Clustering is the task of dividing the population or data points into a number of groups
+such that data points in the same groups are more similar to other data points in the same group 
+than those in other groups. In simple words, the aim is to segregate groups with similar traits 
+and assign them into clusters.
+7 slide==============================
+Dimensionality reduction, or dimension reduction, is the transformation of data from a high-dimensional 
+space into a low-dimensional space so that the low-dimensional representation retains some meaningful 
+properties of the original data, ideally close to its intrinsic dimension.
+Dimensionality reduction is common in fields that deal with large numbers of observations and/or large numbers 
+of variables, such as signal processing, speech recognition, neuroinformatics, and bioinformatics.
+8 slide==============================
+Model selection is the task of selecting a statistical model from a set of candidate models, given data. 
+In the simplest cases, a pre-existing set of data is considered. However, the task can also involve the 
+design of experiments such that the data collected is well-suited to the problem of model selection. 
+Given candidate models of similar predictive or explanatory power, the simplest model is most likely
+ to be the best choice
+9 slide==============================
+Data preprocessing is an integral part of machine learning, 
+since the quality of the data and the useful information that
+ can be extracted from it directly affects the ability of our model to learn;
+ therefore, it is extremely important that we preprocess our data before entering it into our model.
