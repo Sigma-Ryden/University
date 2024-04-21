@@ -1,0 +1,53 @@
+Завдання:
+- виписати свої навички (мови, ліби, фреймворки, тд)
+- виписати цікаві для вас сфери
+- прочитати статті по цікавої для вас сфери (medium.com)
+- вибрати тему по статтям
+- протестувати ідею теми, або знайти дипломні роботи або дослідження, в яких вже була реалізована ідея
+
+Хід роботи:
+    Навички:
+        - Мови: C/C++, Python
+        - Бібліотеки: SDL2, SF, Rew (openAL, pandas, sklearn, tensorflow)
+        - Фреймворки: QtFramework
+
+    Цікаві сфери:
+        - MachineLearning, GameDevelopment, LibraryDevelopment (Tools)
+
+    Статті:
+        - [Music Source Separation with Band-Split RoPE Transformer](https://arxiv.org/abs/2309.02612)
+        - (AudioSep](https://www.unite.ai/audiosep-separate-anything-you-describe/)
+        - [VoiceFilter : Targeted Voice Separation Model](https://medium.com/axinc-ai/voicefilter-targeted-voice-separation-model-6fe6f85309ea)
+        - [Example* VoiceFilter : Targeted Voice Separation Model](https://audio-agi.github.io/Separate-Anything-You-Describe/)
+        - [VoiceFilter: Targeted Voice Separation by Speaker-Conditioned Spectrogram Masking](https://arxiv.org/abs/1810.04826)
+
+    Тема: Розробка методики мультиголосового поділу на основі нейронних мереж
+
+
+Наукова стаття - 8ст, обрати журнал для публікації (2 наукових журнали на вибір)
+(Вступ (опис предметної області і актуальність проблеми), аналіз предметної області, мета і задачі дослідження, результати дослідження 1/2 (або 2/3), висновки, література)
+- https://con.dut.edu.ua/index.php/communication/about
+- https://journals.dut.edu.ua/index.php/dataprotect/about
+
+Конференції:
+Тези на конф.
+Прогноз дослідження (або результати)
+Ефект на рівні дослідження (які перспективи) або порівняння двох методологій (обґрунтування)
+
+Всеукраїнська науково-технічна конференція «Застосування програмного забезпечення в ІКТ»
+Навчально-науковий інститут Інформаційних технологій,
+кафедра інженерії програмного забезпечення
+Замрій Ірина Вікторівна
+096 827-76-50
+ipzduikt@gmail.com
+24 квітня
+
+Всеукраїнська
+ІV Всеукраїнська Науково-практична конференція «Сучасні інтелектуальні інформаційні технології в науці та освіті»
+Навчально-науковий інститут Інформаційних технологій,
+кафедра штучного інтелекту,
+Зінченко Ольга Валеріївна
+063 350-32-63
+Zinchenko@dut.edu.ua
+18 травня
+
